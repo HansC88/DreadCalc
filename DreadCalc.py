@@ -9,11 +9,29 @@ print()
 print("DreadCalc Version 0.1")
 print() 
 print() 
-DamageScore = input("Wat is de damage-score? (0-10) ")
-ReproducibilityScore = input("Wat is de Reproducibility-score? (0-10) ")
-ExploitabilityScore = input("Wat is de Exploitability-score? (0-10) ")
-AffecteduserScore = input("Wat is de Affected user-score? (0-10) ")
-DiscoverabilityScore = input("Wat is de Discoverability-score? (0-10) ")
+
+def get_int(prompt):
+    while True:
+        try:
+            value = int(input(prompt))
+        except ValueError:
+            print("Vul een cijfer in tussen de 0 en 10... ")
+            continue
+
+        if value < 0:
+            print("Vul een waarde in tussen de 0 en 10... ")
+            continue
+        if value > 10:
+            print("Vul een waarde in tussen de 0 en 10... ")
+        else:
+            break
+    return value
+
+DamageScore = get_int("Wat is de damage-score? (0-10) ")
+ReproducibilityScore = get_int("Wat is de Reproducibility-score? (0-10) ")
+ExploitabilityScore = get_int("Wat is de Exploitability-score? (0-10) ")
+AffecteduserScore = get_int("Wat is de Affected user-score? (0-10) ")
+DiscoverabilityScore = get_int("Wat is de Discoverability-score? (0-10) ")
 
 DreadScore = ((int(DamageScore) + int(ReproducibilityScore) + int(ExploitabilityScore) + int(AffecteduserScore) + int(DiscoverabilityScore)) / 5)
 
