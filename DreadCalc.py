@@ -6,7 +6,7 @@ print("| |/ / | |   |  __/| (_| || (_| || \__/\| (_| || || (__ ")
 print("|___/  |_|    \___| \__,_| \__,_| \____/ \__,_||_| \___|")
 print()                                                    
 print() 
-print("DreadCalc Version 0.1")
+print("DreadCalc Version 0.2")
 print() 
 print() 
 
@@ -17,7 +17,6 @@ def get_int(prompt):
         except ValueError:
             print("Vul een cijfer in tussen de 0 en 10... ")
             continue
-
         if value < 0:
             print("Vul een waarde in tussen de 0 en 10... ")
             continue
